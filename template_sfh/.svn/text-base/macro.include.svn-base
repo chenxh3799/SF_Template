@@ -1,0 +1,71 @@
+<#-- 本文件包含一些公共的函数,本文件会被其它模板自动include -->
+
+<#-- 将value变成jsp el表达式,主要由于FreeMarker生成表达式不方便 -->
+<#macro jspEl value>${r"${"}${value}}</#macro>
+
+<#-- 生成java构造函数 -->
+<#macro generateConstructor constructor>
+	public ${constructor}(){
+	}
+
+	public ${constructor}(
+	<#list table.compositeIdColumns as column>
+		${column.javaType} ${column.columnNameLower}<#if column_has_next>,</#if>
+	</#list>		
+	){
+	<#list table.compositeIdColumns as column>
+		<#if column.pk>
+		this.${column.columnNameLower} = ${column.columnNameLower};
+		</#if>
+	</#list>	
+	}
+
+</#macro>
+
+<#--jsp页面生成表单查询用这个特别加上了searchCriteria最为前缀 -->
+<#macro generateForm column>
+	<td class="list_td per4_1" align="left">
+		<div class="label"><label for="searchCriteria.${column.columnNameLower}"><%=${className}.ALIAS_${column.constantName}%>:</label></div>
+		<#if column.isDateTimeColumn>
+		<div class="input"><sfform:date path="searchCriteria.${column.columnNameLower}" id="${column.columnNameLower}"/></div>
+		<#else>
+		<div class="input"><sfform:input path="searchCriteria.${column.columnNameLower}" /></div>
+		</#if>						
+	</td>
+</#macro>
+
+<#--jsp页面生成表单新增,编辑用-->
+<#macro generateEditForm column>
+	<td class="list_td per4_1" align="left">
+		<div class="label"><label for="${column.columnNameLower}"><%=${className}.ALIAS_${column.constantName}%>:</label></div>
+		<#if column.isDateTimeColumn>
+		<div class="input"><sfform:date path="${column.columnNameLower}" id="${column.columnNameLower}"/></div>
+		<#else>
+		<div class="input"><sfform:input path="${column.columnNameLower}" /></div>
+		</#if>						
+	</td>
+</#macro>
+
+<#--主键数据类型，暂不考虑复合主键-->
+<#macro getPKDataType>
+	${table.pkColumn.javaType}
+</#macro>
+
+<#--主键数据类型加上引号，以免在ibaits配置文件中不识别，暂不考虑复合主键-->
+<#macro getPKDataTypeForIbatis>
+	"${table.pkColumn.javaType}"
+</#macro>
+
+<#--返回主键的get方法，暂不考虑复合主键-->
+<#macro getPKGetMethod>
+	get${table.pkColumn.columnName}()
+</#macro>
+
+
+<#--查看页面表单布局 -->
+<#macro generateViewForm column>
+	<td class="list_td per4_1">
+		<div class="label"><label for="${column.columnNameLower}"><%=${className}.ALIAS_${column.constantName}%>:</label></div>
+		<div class="input"><p><@jspEl '${classNameLower}.${column.columnNameLower}'/></p></div>		
+	</td>
+</#macro>

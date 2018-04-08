@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="generator/src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="generator/lib/antlr.jar"/>
+	<classpathentry kind="lib" path="generator/lib/freemarker.jar"/>
+	<classpathentry kind="lib" path="generator/lib/ojdbc.jar"/>
+	<classpathentry kind="lib" path="generator/lib/ojdbc6_g.jar"/>
+	<classpathentry kind="lib" path="generator/lib/ojdbc6.jar"/>
+	<classpathentry kind="output" path="bin/classes"/>
+</classpath>

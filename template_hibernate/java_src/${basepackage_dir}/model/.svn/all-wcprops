@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn4/sinopower/!svn/ver/30/trunk/DEMO_0/SF_Template/template_hibernate/java_src/$%7Bbasepackage_dir%7D/model
+END
+${className}Id.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn4/sinopower/!svn/ver/30/trunk/DEMO_0/SF_Template/template_hibernate/java_src/$%7Bbasepackage_dir%7D/model/$%7BclassName%7DId.java
+END
+${className}.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn4/sinopower/!svn/ver/30/trunk/DEMO_0/SF_Template/template_hibernate/java_src/$%7Bbasepackage_dir%7D/model/$%7BclassName%7D.java
+END

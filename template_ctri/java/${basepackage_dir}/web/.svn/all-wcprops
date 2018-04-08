@@ -1,0 +1,11 @@
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn4/sinopower/!svn/ver/1222/trunk/DEMO_0/SF_Template/template_ctri/java/$%7Bbasepackage_dir%7D/web
+END
+${className}Validator.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn4/sinopower/!svn/ver/1222/trunk/DEMO_0/SF_Template/template_ctri/java/$%7Bbasepackage_dir%7D/web/$%7BclassName%7DValidator.java
+END

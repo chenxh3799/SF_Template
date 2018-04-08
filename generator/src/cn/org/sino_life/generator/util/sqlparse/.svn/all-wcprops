@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn4/sinopower/!svn/ver/30/trunk/DEMO_0/SF_Template/generator/src/cn/org/sino_life/generator/util/sqlparse
+END
+BasicSqlFormatter.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn4/sinopower/!svn/ver/30/trunk/DEMO_0/SF_Template/generator/src/cn/org/sino_life/generator/util/sqlparse/BasicSqlFormatter.java
+END
+NamedParameterUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn4/sinopower/!svn/ver/30/trunk/DEMO_0/SF_Template/generator/src/cn/org/sino_life/generator/util/sqlparse/NamedParameterUtils.java
+END
+SqlTypeChecker.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn4/sinopower/!svn/ver/30/trunk/DEMO_0/SF_Template/generator/src/cn/org/sino_life/generator/util/sqlparse/SqlTypeChecker.java
+END
+ResultSetMetaDataHolder.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn4/sinopower/!svn/ver/30/trunk/DEMO_0/SF_Template/generator/src/cn/org/sino_life/generator/util/sqlparse/ResultSetMetaDataHolder.java
+END
+SqlParseHelper.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn4/sinopower/!svn/ver/30/trunk/DEMO_0/SF_Template/generator/src/cn/org/sino_life/generator/util/sqlparse/SqlParseHelper.java
+END
+ParsedSql.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn4/sinopower/!svn/ver/30/trunk/DEMO_0/SF_Template/generator/src/cn/org/sino_life/generator/util/sqlparse/ParsedSql.java
+END

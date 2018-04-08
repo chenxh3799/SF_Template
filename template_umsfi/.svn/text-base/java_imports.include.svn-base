@@ -1,0 +1,11 @@
+import java.util.*;
+
+import ${basepackage}.domain.*;
+import ${basepackage}.orm.*;
+import ${basepackage}.service.*;
+
+/**
+ * @author sino-life
+ * @version 1.0
+ */
+

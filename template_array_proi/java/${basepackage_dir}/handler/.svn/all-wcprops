@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn4/sinopower/!svn/ver/36903/trunk/DEMO_0/SF_Template/template_array_proi/java/$%7Bbasepackage_dir%7D/handler
+END
+${className}InArrayTypeHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 151
+/svn4/sinopower/!svn/ver/36903/trunk/DEMO_0/SF_Template/template_array_proi/java/$%7Bbasepackage_dir%7D/handler/$%7BclassName%7DInArrayTypeHandler.java
+END
+${className}OutArrayTypeHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 152
+/svn4/sinopower/!svn/ver/36903/trunk/DEMO_0/SF_Template/template_array_proi/java/$%7Bbasepackage_dir%7D/handler/$%7BclassName%7DOutArrayTypeHandler.java
+END

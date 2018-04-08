@@ -1,0 +1,97 @@
+<#include "/macro.include"/> 
+<#assign className = table.className>   
+<#assign classNameLower = className?uncap_first> 
+<?xml version="1.0" encoding="UTF-8"?>
+<flow xmlns="http://www.springframework.org/schema/webflow"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.springframework.org/schema/webflow http://www.springframework.org/schema/webflow/spring-webflow-2.0.xsd">
+    
+     <var name="pageCriteria" class="com.sinolife.sf.framework.page.DataPageRequest" />
+     <var name="searchCriteria" class="com.sinolife.sf.framework.web.SearchCriteria" />
+    
+    <on-start>
+		<evaluate expression="searchCriteria.setSearchCriteria(new ${basepackage}.domain.${className}())"   />
+	</on-start>
+	
+	<view-state id="MainPage" model="searchCriteria"   view="${className}/main">
+	   <on-render>
+	     <evaluate expression="${classNameLower}Service.buildDataPageRequest(pageCriteria,searchCriteria.getSearchCriteria())" result="requestScope.pageRequest" ></evaluate>
+	     <evaluate expression="${classNameLower}Service.list(requestScope.pageRequest)" result="requestScope.dataPage" ></evaluate>
+	        
+	     <set name="flowScope.${classNameLower}" value="null"></set>
+	     
+	   </on-render>	  
+	   
+	   <transition on="next"  >
+         <evaluate expression="pageCriteria.nextPageRequest()" />
+         <render fragments="list" />
+       </transition>
+       
+        <transition on="pre">
+         <evaluate expression="pageCriteria.prePageRequest()" />
+         <render fragments="list" />
+        </transition>
+        
+        <transition on="new" to="addNewPage" >
+           <evaluate expression="${classNameLower}Service.create${className}()"  result="flowScope.${classNameLower}"/>
+        </transition>
+        
+        
+         <transition on="edit" to="editPage" >
+           <evaluate expression="${classNameLower}Service.get${className}ByPK(requestParameters.${table.pkColumn.columnNameLower})"  result="flowScope.${classNameLower}"/>
+        </transition>
+        
+         <transition on="view" to="viewPage" >
+           <evaluate expression="${classNameLower}Service.get${className}ByPK(requestParameters.${table.pkColumn.columnNameLower})"  result="flowScope.${classNameLower}"/>
+        </transition>
+        
+        <transition on="remove" to="MainPage" >
+           <evaluate expression="${classNameLower}Service.remove${className}(requestParameters.${table.pkColumn.columnNameLower})"  />
+        </transition>
+        
+         <transition on="search"  to="MainPage">
+          <evaluate expression="pageCriteria.reset()" />
+        </transition>
+        
+        
+	</view-state>
+	
+	
+	<view-state id="addNewPage" model="${classNameLower}"    view="${className}/new">
+		<binder>
+		    <!-- 这里代码生成器会根据数据库中表字段自动生成所有属性，开发人员可以根据实际情况进行修改-->
+		    <@generatorBind />			
+		</binder>
+		
+		<transition on="save" to="MainPage"  >
+		    <evaluate expression="${classNameLower}Service.add${className}(${classNameLower})" />
+		</transition>
+		<transition on="cancel" to="MainPage" bind="false"  validate="false"/>
+	</view-state>
+	
+	<view-state id="editPage" model="${classNameLower}"    view="${className}/edit">
+		<binder>
+		    <!-- 这里代码生成器会根据数据库中表字段自动生成所有属性，开发人员可以根据实际情况进行删减 -->
+			<@generatorBind />
+		</binder>
+		<transition on="save" to="MainPage" >
+		    <evaluate expression="${classNameLower}Service.update${className}(${classNameLower})" />
+		</transition>
+		<transition on="cancel" to="MainPage" bind="false" validate="false" />
+	</view-state>
+	
+	
+	<view-state id="viewPage"   model="${classNameLower}"  view="${className}/view">
+		<transition on="back" to="MainPage"  >
+		</transition>
+	</view-state>
+	
+     
+</flow>
+
+<#--web flow 值绑定用 -->
+<#macro generatorBind>
+	<#list table.columns as column>
+		<binding property="${column.columnNameLower}" required="${(!column.nullable)?string}" />	
+	</#list>
+</#macro>

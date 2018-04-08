@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn4/sinopower/!svn/ver/30/trunk/DEMO_0/SF_Template/template_hibernate
+END
+java_imports.include
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn4/sinopower/!svn/ver/30/trunk/DEMO_0/SF_Template/template_hibernate/java_imports.include
+END
+macro.include
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn4/sinopower/!svn/ver/30/trunk/DEMO_0/SF_Template/template_hibernate/macro.include
+END
+java_copyright.include
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn4/sinopower/!svn/ver/30/trunk/DEMO_0/SF_Template/template_hibernate/java_copyright.include
+END
+custom.include
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn4/sinopower/!svn/ver/30/trunk/DEMO_0/SF_Template/template_hibernate/custom.include
+END

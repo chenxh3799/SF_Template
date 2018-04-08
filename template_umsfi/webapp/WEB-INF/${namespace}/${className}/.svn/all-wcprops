@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn4/sinopower/!svn/ver/1321/trunk/DEMO_0/SF_Template/template_umsfi/webapp/WEB-INF/$%7Bnamespace%7D/$%7BclassName%7D
+END
+main.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn4/sinopower/!svn/ver/30/trunk/DEMO_0/SF_Template/template_umsfi/webapp/WEB-INF/$%7Bnamespace%7D/$%7BclassName%7D/main.jsp
+END
+edit.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn4/sinopower/!svn/ver/30/trunk/DEMO_0/SF_Template/template_umsfi/webapp/WEB-INF/$%7Bnamespace%7D/$%7BclassName%7D/edit.jsp
+END
+new.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn4/sinopower/!svn/ver/30/trunk/DEMO_0/SF_Template/template_umsfi/webapp/WEB-INF/$%7Bnamespace%7D/$%7BclassName%7D/new.jsp
+END
+view.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn4/sinopower/!svn/ver/30/trunk/DEMO_0/SF_Template/template_umsfi/webapp/WEB-INF/$%7Bnamespace%7D/$%7BclassName%7D/view.jsp
+END
+list.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn4/sinopower/!svn/ver/1321/trunk/DEMO_0/SF_Template/template_umsfi/webapp/WEB-INF/$%7Bnamespace%7D/$%7BclassName%7D/list.jsp
+END
+${classNameFirstLower}-flow.xml
+K 25
+svn:wc:ra_dav:version-url
+V 154
+/svn4/sinopower/!svn/ver/1321/trunk/DEMO_0/SF_Template/template_umsfi/webapp/WEB-INF/$%7Bnamespace%7D/$%7BclassName%7D/$%7BclassNameFirstLower%7D-flow.xml
+END
+toolbar.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn4/sinopower/!svn/ver/30/trunk/DEMO_0/SF_Template/template_umsfi/webapp/WEB-INF/$%7Bnamespace%7D/$%7BclassName%7D/toolbar.jsp
+END

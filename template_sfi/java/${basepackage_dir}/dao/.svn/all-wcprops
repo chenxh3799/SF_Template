@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn4/sinopower/!svn/ver/30/trunk/DEMO_0/SF_Template/template_sfi/java/$%7Bbasepackage_dir%7D/dao
+END
+${className}Dao-ibatis2.xml
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn4/sinopower/!svn/ver/30/trunk/DEMO_0/SF_Template/template_sfi/java/$%7Bbasepackage_dir%7D/dao/$%7BclassName%7DDao-ibatis2.xml
+END
+${className}Dao.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn4/sinopower/!svn/ver/30/trunk/DEMO_0/SF_Template/template_sfi/java/$%7Bbasepackage_dir%7D/dao/$%7BclassName%7DDao.java
+END

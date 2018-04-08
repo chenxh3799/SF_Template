@@ -1,0 +1,11 @@
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn4/sinopower/!svn/ver/30/trunk/DEMO_0/SF_Template/template_sfh/java/$%7Bbasepackage_dir%7D/orm
+END
+${className}Orm.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn4/sinopower/!svn/ver/30/trunk/DEMO_0/SF_Template/template_sfh/java/$%7Bbasepackage_dir%7D/orm/$%7BclassName%7DOrm.java
+END

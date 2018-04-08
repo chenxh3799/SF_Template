@@ -1,0 +1,57 @@
+package cn.org.sino_life.generator;
+
+import java.util.ArrayList;
+import java.util.List;
+
+
+/**
+ * 
+ * @author sino-life
+ */
+
+public class GeneratorMain {
+	
+	/**
+	 * 通过数据库表生成文件,sf_new_20110928为模板的根目录
+	 * 
+	 * @throws Exception
+	 */
+	public static void generateByTable(GeneratorFacade g, String template)
+			throws Exception {
+		for (String string : initList()) {
+			g.generateByTable(string, template); // 通过数据库表生成文件,template为模板的根目录
+
+		}
+	}
+	
+	public static void generateByProcedure(GeneratorFacade g,String procedureName,String template) throws Exception{
+		g.generateByProcedure(procedureName, template);//通过存储过程生成文件
+	}
+
+	
+	/**
+	 * 需要生成的表加如list中,可以批量生成，也可以单表生成
+	 * 
+	 * @return
+	 */
+	public static List<String> initList(){
+		List<String> list = new ArrayList<String>();
+		list.add("SF_EMAIL_RECEIVER");
+		return list;
+	}
+	/**
+	 * 请直接修改以下代码调用不同的方法以执行相关生成任务.
+	 */
+	public static void main(String[] args) throws Exception {
+		/**
+		 * 有三点需要引起特别的注意 
+		 * (1)数据库连接等一些配置在generator.xml中进行配置
+		 * (2)表无主键，无法生成 
+		 * (3)外键关联的表无读权限，无法生成
+		 */
+		GeneratorFacade g = new GeneratorFacade();
+		generateByTable(g, "sf_new_20110928");// 新框架下的模板
+		//打开文件夹
+		Runtime.getRuntime().exec("cmd.exe /c start "+GeneratorProperties.getRequiredProperty("outRoot"));
+	}
+}

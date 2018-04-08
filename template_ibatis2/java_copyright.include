@@ -1,0 +1,5 @@
+/*
+ * Copyright (c) 2010, sino-life its affiliates. All rights reserved.
+ * Since 2010 <#if now??>- ${now?string('yyyy')}</#if>
+ */
+

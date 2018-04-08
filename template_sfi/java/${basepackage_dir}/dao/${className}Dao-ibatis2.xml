@@ -1,0 +1,107 @@
+<#include "/macro.include"/>
+<#assign className = table.className>   
+<#assign classNameLower = className?uncap_first> 
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" 
+    "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="${basepackage}.dao.${className}Dao">
+
+     <resultMap id="${className}.ResultMap" class="${basepackage}.domain.${className}">
+        <#list table.columns as column>
+         <result property="${column.columnNameLower}" column="${column.sqlName}"/>
+		</#list>       
+     </resultMap>
+     
+    <sql id="${className}.Columns">
+	    <![CDATA[
+	    <#list table.columns as column>"${column.sqlName}" <#if column_has_next>,</#if></#list>
+	    ]]>
+	</sql>
+	
+	
+
+    <sql id="${className}.dynamic.where">
+	    <dynamic prepend="WHERE">
+	    	 <#list table.columns as column>
+		       <isNotEmpty prepend="AND" property="${column.columnNameLower}">
+		             "${column.sqlName}" = #${column.columnNameLower}#
+		       </isNotEmpty>		      			
+	       </#list>
+	    </dynamic>	
+	</sql>
+	
+	  
+    
+    <delete id="removeByPK" parameterClass=<@getPKDataTypeForIbatis/>>
+	    <![CDATA[
+	        DELETE FROM "${table.sqlName}" WHERE "${table.pkColumn.sqlName}"  = #value#       
+	    ]]>
+    </delete>
+    
+    <update id="update${className}"  parameterClass="${basepackage}.domain.${className}">
+       <![CDATA[
+        UPDATE "${table.sqlName}" SET
+	        <#list table.notPkColumns as column>
+	        "${column.sqlName}" = #${column.columnNameLower}# <#if column_has_next>,</#if>
+	        </#list>
+        WHERE 
+            "${table.pkColumn.sqlName}" = #${table.pkColumn.columnNameLower}#
+       ]]>
+
+    </update>
+    
+    <!-- 新增 -->
+     <insert id="add${className}" parameterClass="${basepackage}.domain.${className}" >
+       insert into  "${table.sqlName}"(<include refid="${className}.Columns"/>)
+       values(
+         <#list table.columns as column>
+        	#${column.columnNameLower}# <#if column_has_next>,</#if>
+         </#list>  
+       )
+       <!-- 主键自动生成例子， test_seq 这是数据库中的sequence
+       <selectKey resultClass="<@getPKDataType/>" type="pre" keyProperty="${table.pkColumn.columnNameLower}" >
+            SELECT  test_seq.nextval AS ID FROM DUAL
+        </selectKey>
+        -->
+    </insert>
+    
+    <!-- 查询 -->
+    <select id="findAllByProperty" parameterClass="java.util.Map" resultMap="${className}.ResultMap">
+    	 SELECT <include refid="${className}.Columns"/> FROM  "${table.sqlName}"
+		<include refid="${className}.dynamic.where"/>
+     </select>
+     
+      <!-- 通过主键查询 -->
+     <select id="getByPK" parameterClass=<@getPKDataTypeForIbatis/> resultMap="${className}.ResultMap">
+	    SELECT <include refid="${className}.Columns"/>
+	     FROM  "${table.sqlName}"
+	     WHERE 
+	      "${table.pkColumn.sqlName}" = #value#	     
+    </select>
+    
+    <!-- 查询 -->
+    <select id="list"   resultMap="${className}.ResultMap">
+    	 SELECT <include refid="${className}.Columns"/> FROM  "${table.sqlName}"
+    </select>
+    
+    <!-- 记录条数，分页用 -->
+    <select id="getMatched${className}Count" parameterClass="java.util.Map"  resultClass="java.lang.Integer"> 
+        select count(*) from  "${table.sqlName}"
+        <include refid="${className}.dynamic.where"/>
+    </select>
+    
+    
+    <select id="getMatched${className}Page"   parameterClass="java.util.Map"  resultMap="${className}.ResultMap">
+          SELECT <include refid="${className}.Columns"/> from (
+          SELECT rownum as rnb,  <include refid="${className}.Columns"/>
+          from  "${table.sqlName}"
+          <include refid="${className}.dynamic.where"/>
+          order  by  "${table.pkColumn.sqlName}"
+          )
+          where rnb <![CDATA[ >=  ]]> #req.startRow#  AND rnb <![CDATA[ <= ]]> #req.endRow#
+    </select>
+    
+    
+</sqlMap>
+

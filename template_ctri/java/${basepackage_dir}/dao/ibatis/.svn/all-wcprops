@@ -1,0 +1,11 @@
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn4/sinopower/!svn/ver/1250/trunk/DEMO_0/SF_Template/template_ctri/java/$%7Bbasepackage_dir%7D/dao/ibatis
+END
+${className}Dao-ibatis2.xml
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn4/sinopower/!svn/ver/1250/trunk/DEMO_0/SF_Template/template_ctri/java/$%7Bbasepackage_dir%7D/dao/ibatis/$%7BclassName%7DDao-ibatis2.xml
+END

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--******************************
+本文件用于table变量的属性自定义 className 使用的类名称，如果不指定，默认是驼峰规则的数据表名
+ ***********************************-->
+ 
+<!-- 
+<table className="类名称" tableAlias="表的别名">
+</table>
+ -->
+<table className="EmailManualHandler" >
+
+	
+</table>

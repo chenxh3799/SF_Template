@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn4/sinopower/!svn/ver/36899/trunk/DEMO_0/SF_Template/generator/src/cn/org/sino_life/generator/provider/db/procedure
+END
+ProcedureFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn4/sinopower/!svn/ver/36899/trunk/DEMO_0/SF_Template/generator/src/cn/org/sino_life/generator/provider/db/procedure/ProcedureFactory.java
+END
+PLSQL2.g
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn4/sinopower/!svn/ver/36899/trunk/DEMO_0/SF_Template/generator/src/cn/org/sino_life/generator/provider/db/procedure/PLSQL2.g
+END
+ProcedureTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn4/sinopower/!svn/ver/36899/trunk/DEMO_0/SF_Template/generator/src/cn/org/sino_life/generator/provider/db/procedure/ProcedureTest.java
+END
+PLSQL2Parser.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn4/sinopower/!svn/ver/36899/trunk/DEMO_0/SF_Template/generator/src/cn/org/sino_life/generator/provider/db/procedure/PLSQL2Parser.java
+END
+PLSQL2Lexer.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn4/sinopower/!svn/ver/36899/trunk/DEMO_0/SF_Template/generator/src/cn/org/sino_life/generator/provider/db/procedure/PLSQL2Lexer.java
+END
+PLSQL2Test.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn4/sinopower/!svn/ver/36899/trunk/DEMO_0/SF_Template/generator/src/cn/org/sino_life/generator/provider/db/procedure/PLSQL2Test.java
+END

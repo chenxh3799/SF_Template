@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn4/sinopower/!svn/ver/30/trunk/DEMO_0/SF_Template/template_hibernate/web/$%7Bnamespace%7D/$%7BclassName%7D
+END
+edit.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn4/sinopower/!svn/ver/30/trunk/DEMO_0/SF_Template/template_hibernate/web/$%7Bnamespace%7D/$%7BclassName%7D/edit.jsp
+END
+form_include.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn4/sinopower/!svn/ver/30/trunk/DEMO_0/SF_Template/template_hibernate/web/$%7Bnamespace%7D/$%7BclassName%7D/form_include.jsp
+END
+base.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn4/sinopower/!svn/ver/30/trunk/DEMO_0/SF_Template/template_hibernate/web/$%7Bnamespace%7D/$%7BclassName%7D/base.jsp
+END
+list.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn4/sinopower/!svn/ver/30/trunk/DEMO_0/SF_Template/template_hibernate/web/$%7Bnamespace%7D/$%7BclassName%7D/list.jsp
+END
+show.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn4/sinopower/!svn/ver/30/trunk/DEMO_0/SF_Template/template_hibernate/web/$%7Bnamespace%7D/$%7BclassName%7D/show.jsp
+END
+create.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn4/sinopower/!svn/ver/30/trunk/DEMO_0/SF_Template/template_hibernate/web/$%7Bnamespace%7D/$%7BclassName%7D/create.jsp
+END

@@ -1,0 +1,119 @@
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn4/sinopower/!svn/ver/36900/trunk/DEMO_0/SF_Template/generator/src/cn/org/sino_life/generator/util
+END
+XMLHelper.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn4/sinopower/!svn/ver/30/trunk/DEMO_0/SF_Template/generator/src/cn/org/sino_life/generator/util/XMLHelper.java
+END
+AntPathMatcher.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn4/sinopower/!svn/ver/30/trunk/DEMO_0/SF_Template/generator/src/cn/org/sino_life/generator/util/AntPathMatcher.java
+END
+GeneratorException.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn4/sinopower/!svn/ver/30/trunk/DEMO_0/SF_Template/generator/src/cn/org/sino_life/generator/util/GeneratorException.java
+END
+BeanHelper.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn4/sinopower/!svn/ver/30/trunk/DEMO_0/SF_Template/generator/src/cn/org/sino_life/generator/util/BeanHelper.java
+END
+StringHelper.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn4/sinopower/!svn/ver/3787/trunk/DEMO_0/SF_Template/generator/src/cn/org/sino_life/generator/util/StringHelper.java
+END
+IOHelper.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn4/sinopower/!svn/ver/30/trunk/DEMO_0/SF_Template/generator/src/cn/org/sino_life/generator/util/IOHelper.java
+END
+DateHelper.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn4/sinopower/!svn/ver/30/trunk/DEMO_0/SF_Template/generator/src/cn/org/sino_life/generator/util/DateHelper.java
+END
+binary_filelist.txt
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn4/sinopower/!svn/ver/30/trunk/DEMO_0/SF_Template/generator/src/cn/org/sino_life/generator/util/binary_filelist.txt
+END
+SqlExecutorHelper.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn4/sinopower/!svn/ver/30/trunk/DEMO_0/SF_Template/generator/src/cn/org/sino_life/generator/util/SqlExecutorHelper.java
+END
+ArrayHelper.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn4/sinopower/!svn/ver/30/trunk/DEMO_0/SF_Template/generator/src/cn/org/sino_life/generator/util/ArrayHelper.java
+END
+FileHelper.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn4/sinopower/!svn/ver/30/trunk/DEMO_0/SF_Template/generator/src/cn/org/sino_life/generator/util/FileHelper.java
+END
+TestDataGenerator.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn4/sinopower/!svn/ver/30/trunk/DEMO_0/SF_Template/generator/src/cn/org/sino_life/generator/util/TestDataGenerator.java
+END
+FreemarkerHelper.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn4/sinopower/!svn/ver/30/trunk/DEMO_0/SF_Template/generator/src/cn/org/sino_life/generator/util/FreemarkerHelper.java
+END
+SystemHelper.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn4/sinopower/!svn/ver/30/trunk/DEMO_0/SF_Template/generator/src/cn/org/sino_life/generator/util/SystemHelper.java
+END
+GLogger.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn4/sinopower/!svn/ver/30/trunk/DEMO_0/SF_Template/generator/src/cn/org/sino_life/generator/util/GLogger.java
+END
+PropertyPlaceholderHelper.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn4/sinopower/!svn/ver/30/trunk/DEMO_0/SF_Template/generator/src/cn/org/sino_life/generator/util/PropertyPlaceholderHelper.java
+END
+ListHashtable.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn4/sinopower/!svn/ver/30/trunk/DEMO_0/SF_Template/generator/src/cn/org/sino_life/generator/util/ListHashtable.java
+END
+AntPathStringMatcher.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn4/sinopower/!svn/ver/30/trunk/DEMO_0/SF_Template/generator/src/cn/org/sino_life/generator/util/AntPathStringMatcher.java
+END
+PropertiesHelper.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn4/sinopower/!svn/ver/30/trunk/DEMO_0/SF_Template/generator/src/cn/org/sino_life/generator/util/PropertiesHelper.java
+END

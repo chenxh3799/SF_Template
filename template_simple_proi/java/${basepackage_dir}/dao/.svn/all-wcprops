@@ -1,0 +1,11 @@
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn4/sinopower/!svn/ver/36903/trunk/DEMO_0/SF_Template/template_simple_proi/java/$%7Bbasepackage_dir%7D/dao
+END
+${className}Dao.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn4/sinopower/!svn/ver/36903/trunk/DEMO_0/SF_Template/template_simple_proi/java/$%7Bbasepackage_dir%7D/dao/$%7BclassName%7DDao.java
+END

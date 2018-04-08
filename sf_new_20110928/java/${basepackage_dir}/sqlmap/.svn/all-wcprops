@@ -1,0 +1,11 @@
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn4/sinopower/!svn/ver/37642/trunk/DEMO_0/SF_Template/sf_new_20110928/java/$%7Bbasepackage_dir%7D/sqlmap
+END
+${className}Dao-ibatis2.xml
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn4/sinopower/!svn/ver/37642/trunk/DEMO_0/SF_Template/sf_new_20110928/java/$%7Bbasepackage_dir%7D/sqlmap/$%7BclassName%7DDao-ibatis2.xml
+END

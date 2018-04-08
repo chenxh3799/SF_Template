@@ -1,0 +1,11 @@
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn4/sinopower/!svn/ver/30/trunk/DEMO_0/SF_Template/template_hibernate/generator/src/generator_config/table
+END
+${sqlName}.xml
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn4/sinopower/!svn/ver/30/trunk/DEMO_0/SF_Template/template_hibernate/generator/src/generator_config/table/$%7BsqlName%7D.xml
+END

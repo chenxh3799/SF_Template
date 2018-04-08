@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn4/sinopower/!svn/ver/30/trunk/DEMO_0/SF_Template/template_sfi
+END
+java_imports.include
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn4/sinopower/!svn/ver/30/trunk/DEMO_0/SF_Template/template_sfi/java_imports.include
+END
+macro.include
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn4/sinopower/!svn/ver/30/trunk/DEMO_0/SF_Template/template_sfi/macro.include
+END
+java_copyright.include
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn4/sinopower/!svn/ver/30/trunk/DEMO_0/SF_Template/template_sfi/java_copyright.include
+END
+custom.include
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn4/sinopower/!svn/ver/30/trunk/DEMO_0/SF_Template/template_sfi/custom.include
+END

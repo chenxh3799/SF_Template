@@ -1,0 +1,101 @@
+<#include "/macro.include"/>
+<#assign className = table.className>   
+<#assign classNameLower = className?uncap_first> 
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" 
+    "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="${basepackage}.dao.${className}Dao">
+	
+	 <!-- 查询sql结果与java model映射-->
+	 <resultMap id="${className}.ResultMap" class="${basepackage}.domain.${className}Domain">
+        <#list table.columns as column>
+         <result property="${column.columnNameLower}" column="${column.sqlName}"/>
+		</#list>       
+     </resultMap>
+
+     
+    <!-- 公用查询sql-->
+    <sql id="${className}.Query">
+	    <![CDATA[
+	    select 
+	    <#list table.columns as column>${column.sqlName} <#if column_has_next>,</#if></#list>
+	    from ${table.sqlName}
+	    ]]>
+	    <dynamic prepend="WHERE">
+	    	 <#list table.columns as column>
+		       <isNotEmpty prepend="AND" property="${column.columnNameLower}">
+		             ${column.sqlName} = #${column.columnNameLower}#
+		       </isNotEmpty>		      			
+	       </#list>
+	    </dynamic>	
+	</sql>
+	
+	
+   <!--查询记录数-->
+   <select id="getMatched${className}Count" parameterClass="${basepackage}.domain.${className}Domain"  
+                                       resultClass="java.lang.Integer" >                                             
+     	select count(*) from (
+        <include refid="${className}.Query" />
+        )
+   </select> 
+   
+   <!--分页查询-->
+    <select id="getMatched${className}List"  parameterClass="${basepackage}.domain.${className}Domain"  
+                                   resultMap="${className}.ResultMap">                                               
+	     <dynamic>
+			<isNotNull property="pageSize">
+				SELECT * FROM ( select rownum r, union_tb.* from (
+			</isNotNull>
+		</dynamic>
+	      <include refid="${className}.Query" />
+          <dynamic>
+			<isNotNull property="pageSize">
+				<![CDATA[
+					) union_tb 
+				) WHERE r > #startIndex# AND r <= #startIndex# + #pageSize#
+				]]>
+			</isNotNull>
+		</dynamic>
+     </select>
+     
+    <!-- 删除 -->
+    <delete id="delete${className}" parameterClass="${basepackage}.domain.${className}Domain">
+    	<![CDATA[
+	        DELETE FROM ${table.sqlName} WHERE
+	        <#list table.compositeIdColumns as column>         
+		          ${column.sqlName} = #${column.columnNameLower}# <#if column_has_next> AND </#if>    
+			</#list>
+    	]]>
+    </delete>
+    
+     <!-- 修改 -->
+    <update id="update${className}"  parameterClass="${basepackage}.domain.${className}Domain">
+         <![CDATA[
+	        UPDATE ${table.sqlName} SET
+		        <#list table.notPkColumns as column>
+		        ${column.sqlName} = #${column.columnNameLower}# <#if column_has_next>,</#if>
+		        </#list>
+	        WHERE 
+	        	<#list table.compositeIdColumns as column>
+		        ${column.sqlName} = #${column.columnNameLower}# <#if column_has_next> AND </#if>
+		        </#list>
+    	  ]]>
+    </update>
+    
+    <!-- 保存 -->
+      <insert id="save${className}" parameterClass="${basepackage}.domain.${className}Domain" >
+      	 <![CDATA[
+		        INSERT INTO ${table.sqlName} (
+		        <#list table.columns as column>
+		        	${column.sqlName} <#if column_has_next>,</#if>
+		        </#list>
+		        ) VALUES (
+		        <#list table.columns as column>
+		        	#${column.columnNameLower}# <#if column_has_next>,</#if>
+		        </#list>        
+		        )
+		    ]]>
+    </insert>
+</sqlMap>
+

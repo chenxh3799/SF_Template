@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn4/sinopower/!svn/ver/30/trunk/DEMO_0/SF_Template/template_ibatis2
+END
+java_imports.include
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn4/sinopower/!svn/ver/30/trunk/DEMO_0/SF_Template/template_ibatis2/java_imports.include
+END
+macro.include
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn4/sinopower/!svn/ver/30/trunk/DEMO_0/SF_Template/template_ibatis2/macro.include
+END
+java_copyright.include
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn4/sinopower/!svn/ver/30/trunk/DEMO_0/SF_Template/template_ibatis2/java_copyright.include
+END
+custom.include
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn4/sinopower/!svn/ver/30/trunk/DEMO_0/SF_Template/template_ibatis2/custom.include
+END

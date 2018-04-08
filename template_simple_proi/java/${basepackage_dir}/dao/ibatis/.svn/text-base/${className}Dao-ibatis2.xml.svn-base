@@ -1,0 +1,23 @@
+<#include "/macro.include"/>
+<#assign className = procedure.className>   
+<#assign classNameLower = className?uncap_first> 
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" 
+    "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="${basepackage}.dao.${className}Dao">
+	<!-- 存储过程参数设置 -->
+	<parameterMap id="${className}_RS" class="${basepackage}.po.${className}Po">
+	    <#list procedure.parameters as parameter>
+          <parameter property="${parameter.parameterJavaName}" jdbcType="${parameter.jdbcTypeName}" javaType="${parameter.javaTypeName}" mode="${parameter.parameterTypeName}"></parameter>
+		</#list>  
+	</parameterMap>	
+	
+	<!-- 调用存储过程 -->
+	<procedure id="get${className}" parameterMap="${className}_RS">
+		<![CDATA[
+			{call ${procedure.packageName}.${procedure.procedureName}(<#assign x=procedure.parameterNumber> <#list 1..x as i>?<#if i_has_next>,</#if></#list>)}		
+		]]>
+	</procedure>
+</sqlMap>
+
